@@ -1,0 +1,32 @@
+openapi: 3.1.0
+info:
+  title: Fidget Spinner
+  description: |-
+    A service that akin to real fidget spinners doesn't do any useful work. As
+    surprising as this might be this service has it's uses. When running in a
+    container it can be used to test both Kubernetes horizontal pod autoscaling
+    and cluster capacity autoscaling which also happens to be the primary reason
+    this service was built.
+  license:
+    name: GNU General Public License v3.0 or later
+    identifier: GPL-3.0-or-later
+    url: https://www.gnu.org/licenses/gpl-3.0-standalone.html
+  version: 0.0.1
+paths:
+  /spin:
+    get:
+      summary: Makes the fidget spinner "spin"
+      operationId: spin
+      parameters:
+        - name: speed
+          in: query
+          description: Work scaling factor.
+          required: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Invalid speed value
