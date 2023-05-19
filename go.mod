@@ -1,9 +1,8 @@
-module github.com/fkrestan/fidget_spinner
+module github.com/fkrestan/fidget-spinner
 
 go 1.19
 
 require (
-	github.com/gorilla/mux v1.8.0
 	github.com/prometheus/client_golang v1.14.0
 	go.uber.org/zap v1.24.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9

@@ -15,8 +15,8 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
-	"github.com/fkrestan/fidget_spinner/internal/handler"
-	"github.com/fkrestan/fidget_spinner/internal/middleware"
+	"github.com/fkrestan/fidget-spinner/internal/handler"
+	"github.com/fkrestan/fidget-spinner/internal/middleware"
 )
 
 func main() {
