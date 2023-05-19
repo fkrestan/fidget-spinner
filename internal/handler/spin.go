@@ -19,8 +19,8 @@ func (h *SpinHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		speed = "15"
 	}
 	s, err := strconv.Atoi(speed)
-	if err != nil {
-		http.Error(w, fmt.Sprintf("Invalid spin speed: %s", err), http.StatusBadRequest)
+	if err != nil || s < 1 {
+		http.Error(w, "Invalid spin speed", http.StatusBadRequest)
 		return
 	}
 
